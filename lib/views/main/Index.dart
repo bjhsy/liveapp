@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'Community.dart';
 import 'Home.dart';
@@ -14,11 +15,8 @@ class _IndexState extends State<Index> {
   var _pageController = new PageController(initialPage: 0);
 
   void onTap(int index) {
-    _pageController.animateToPage(
-      index,
-      duration: const Duration(milliseconds: 200),
-      curve: Curves.easeIn
-    );
+    _pageController.animateToPage(index,
+        duration: const Duration(milliseconds: 200), curve: Curves.easeIn);
   }
 
   void onPageChanged(int index) {
@@ -31,6 +29,8 @@ class _IndexState extends State<Index> {
 
   @override
   Widget build(BuildContext context) {
+    ScreenUtil.instance = ScreenUtil(width: 750, height: 1334)..init(context);
+
     return Scaffold(
       body: new PageView.builder(
         onPageChanged: onPageChanged,

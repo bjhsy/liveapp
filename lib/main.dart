@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:redux/redux.dart';
 import 'package:redux_thunk/redux_thunk.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 import 'reducers/Index.dart';
 import 'store/AppState.dart';
@@ -29,7 +30,16 @@ class App extends StatelessWidget {
       child: MaterialApp(
         theme: ThemeData(
           primarySwatch: Colors.purple,
+          backgroundColor: Color(0xfff3f6fa),
         ),
+        localizationsDelegates: [
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+        ],
+        supportedLocales: [
+          const Locale('zh', 'CH'),
+          const Locale('en', 'US'),
+        ],
         routes: {
           'login': (context) => Container(),
           'main': (context) => Main.Index(),

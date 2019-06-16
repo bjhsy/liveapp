@@ -12,7 +12,7 @@ class _LoadingHeaderState extends State<LoadingHeader> {
     return ClassicHeader(
       idleText: '下拉刷新',
       completeText: '已刷新',
-      releaseText: '释放进行刷新',
+      releaseText: '释放看看',
       refreshingText: '刷新中...',
     );
   }
