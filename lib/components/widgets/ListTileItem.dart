@@ -23,16 +23,11 @@ class ListTileItem extends StatelessWidget {
 
   final bool selected;
 
-  final EdgeInsetsGeometry margin;
-
   final Color color;
-
-  static const defaultMargin = EdgeInsets.only(bottom: 1);
 
   const ListTileItem({
     Key key,
     this.color = Colors.white,
-    this.margin = defaultMargin,
     this.leading,
     this.title,
     this.subtitle,
@@ -50,7 +45,6 @@ class ListTileItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: this.color,
-      margin: this.margin,
       child: ListTile(
         contentPadding: this.contentPadding,
         enabled: this.enabled,

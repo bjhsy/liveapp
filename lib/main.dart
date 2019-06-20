@@ -30,7 +30,10 @@ class App extends StatelessWidget {
       child: MaterialApp(
         theme: ThemeData(
           primarySwatch: Colors.purple,
-          backgroundColor: Color(0xfff3f6fa),
+          scaffoldBackgroundColor: Color(0xfff3f6fa),
+          textTheme: TextTheme(
+            subhead: TextStyle(),
+          ),
         ),
         localizationsDelegates: [
           GlobalMaterialLocalizations.delegate,
